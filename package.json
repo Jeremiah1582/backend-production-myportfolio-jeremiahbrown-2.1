@@ -24,7 +24,5 @@
   "description": "this is the back end for my portfolio project. preparing to deploy onto vercel ",
   "author": "jeremiah1582",
   "private": true,
-  "devDependencies": {
-    "vercel": "^28.4.17"
-  }
+  "devDependencies": {}
 }
