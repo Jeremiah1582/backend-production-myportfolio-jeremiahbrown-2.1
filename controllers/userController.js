@@ -1,6 +1,6 @@
 const User = require("../models/userModel");
 const mongoose = require("mongoose");
-const me = "6284d203e313af05096598a3";
+const me = process.env.ME_ID;
 const bcrypt = require("bcrypt");
 const { generateToken } = require("../auth/jwtTokens");
 const {
@@ -105,7 +105,7 @@ exports.sendWhatsappMsg = (req, res) => {
       ).then(console.log("message has been saved to Jeremiah's message list"));
       res.status(200).json({ msg: " your message was successfully sent" });
     })
-    .done();
+    // .done();
 };
 
 // get CV
