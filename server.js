@@ -1,7 +1,7 @@
 const express = require("express");
 const session = require("express-session");
 const app = express();
-const PORT = 5001;
+const PORT = process.env.PORT || `https://backend-portfolio-eight.vercel.app/`;
 require("dotenv").config();
 const methodOverride = require("method-override");
 const cors = require("cors");
