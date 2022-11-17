@@ -48,11 +48,10 @@ app.use(
 app.use("/", indexRouter);
 app.use("/user", userRoutes);
 app.use("/admin", authenticateToken, adminRoutes);
-// app.use("/admin",  adminRoutes);
 app.use("/api", apiRoutes);
 app.get("*", (req, res) => {
   res.status(404).send("you may not be authorised to view this page");
 });
 
-app.get("/", (req, res) => res.send("Hello World!"));
+
 app.listen(PORT, () => console.log(`Example app listening on PORT ${PORT}!`));
